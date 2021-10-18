@@ -14,4 +14,13 @@ body {
 // Bootstrap adjustments
 form.button_to {
   display: inline;
-}
+} 
+
+ a.navbar-brand.user{
+   font-size: .8em;
+   display: flex;
+   
+   .a {
+     font-size: 0.8em
+   }
+ }
