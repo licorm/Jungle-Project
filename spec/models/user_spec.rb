@@ -86,5 +86,23 @@ RSpec.describe User, type: :model do
         )
         assert_equal(@user, User.authenticate_with_credentials('test@test.com', 'password'))
     end
+    it 'should authenticate user if email contains spaces' do
+      @user = User.create(
+          name: 'name',
+          email: 'test@test.com',
+          password: 'password',
+          password_confirmation: 'password'
+        )
+        assert_equal(@user, User.authenticate_with_credentials(' test@test.com', 'password'))
+    end
+    it 'should authenticate user if email is wrong case' do
+      @user = User.create(
+          name: 'name',
+          email: 'test@test.com',
+          password: 'password',
+          password_confirmation: 'password'
+        )
+        assert_equal(@user, User.authenticate_with_credentials('tEst@test.com', 'password'))
+    end
   end
 end

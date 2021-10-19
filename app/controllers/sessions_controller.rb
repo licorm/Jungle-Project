@@ -1,9 +1,10 @@
 class SessionsController < ApplicationController
 
   def create
-    user = User.find_by(email: params[:"/login"][:email])
+    @email = params[:"/login"][:email]
+    user = User.find_by(email: @email.strip.downcase)
     
-    if user = User.authenticate_with_credentials(params[:"/login"][:email], params[:"/login"][:password])
+    if user = User.authenticate_with_credentials(@email.strip.downcase, params[:"/login"][:password])
       session[:user_id] = user.id
       redirect_to '/'
     else
