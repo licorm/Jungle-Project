@@ -23,7 +23,7 @@ RSpec.feature "AddToCarts", type: :feature, js: true do
     page.has_content?('My Cart (1)')
 
     # DEBUG / VERIFY
-    #save_screenshot
+    save_screenshot
 
   end
 end
