@@ -2,6 +2,12 @@
 
 A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
 
+## Final Product
+
+![products page](https://github.com/licorm/Jungle-Project/blob/master/docs/admin-page.png?raw=true)
+![order page](https://github.com/licorm/Jungle-Project/blob/master/docs/order-page.png?raw=true)
+![admin page](https://github.com/licorm/Jungle-Project/blob/master/docs/Products-Page.png?raw=true)
+
 
 ## Setup
 
